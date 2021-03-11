@@ -1,4 +1,7 @@
 # NLPQueryBot
+
+[![hackmd-github-sync-badge](https://hackmd.io/1MRsPiaXQhSZXFv3YLfmKw/badge)](https://hackmd.io/1MRsPiaXQhSZXFv3YLfmKw)
+
 ## 1. Description
 - A web application that can answer simple Questions `Qu` regarding relationships between two *objects*.
 - `Qu` from users using *Natural Language Processing (NLP)*. Different from the ordinary Google searches, our answers won't be simply based on online articles and information. Instead, the answers will largely depend on the information from the document - `Doc` the user uploaded. This means, the main use of our `NLPQueryBot` is to verify the information from your `Doc`, i.e. if you have a very long `Doc` and don't have time to read everything, you can upload your `Doc` and ask `Qu` to verify the information inside your `Doc`. 
@@ -87,7 +90,7 @@ NLPQueryBot
 ```
 ## 4. Usage
 - Clone this repository.
-- Create a virtual environemnt and install files listed in [requirements.txt](). In fact, you only need the 6 libraries/packages below as the rest will be installed along (as complementary packages) so you can run `pip install` manually:
+- Create a virtual environemnt and install files listed in [requirements.txt](requirements.txt). In fact, you only need the 6 libraries/packages below as the rest will be installed along (as complementary packages) so you can run `pip install` manually:
     - 1. `pip install django==2.2`
     - 2. `pip install spacy==2.3.2`
     - 3. `python -m spacy download en_core_web_sm`
@@ -98,7 +101,7 @@ NLPQueryBot
 - Open the link shown in the console below:<br>
 ![](https://i.imgur.com/JHibbk3.png)
 (As you can see from the console, the `Custom Pipeline` has already been initialized before launching our website.)
-- You will be welcomed with a *HomePage* like the one below where you can start uploading your `Doc` and ask `Qus` (A question should contain a subject, a verb and an object so our `QueryBot` can try to find the related *relationships* from your `Doc`). A sample `Doc` can be found at [Example_inputs/Stock.txt]() (It is simply the content of the ['Stock' Wiki page](https://en.wikipedia.org/wiki/Stock)) and some sample `Qus` can be found at [Example_inputs/Qus_ls.txt]().
+- You will be welcomed with a *HomePage* like the one below where you can start uploading your `Doc` and ask `Qus` (A question should contain a subject, a verb and an object so our `QueryBot` can try to find the related *relationships* from your `Doc`). A sample `Doc` can be found at [Example_inputs/Stock.txt](Example_inputs/Stock.txt) (It is simply the content of the ['Stock' Wiki page](https://en.wikipedia.org/wiki/Stock)) and some sample `Qus` can be found at [Example_inputs/Qus_ls.txt](Example_inputs/Qus_ls.txt).
 - As you click the *Submit* button, you will be redirected to the *ResultsPage*.
 - At the top of the *ResultsPage*, our `QueryBot` allowed you to ask another questions (the *ResultsPage* will simply reload to show the new results): 
 - Right below is a small paragraph showing the `Entities` and `Relations` we found from your `Qus`. These `Entities` and `Relations` will be grouped into *SVO* triples to be used to draw the `KG` below.
