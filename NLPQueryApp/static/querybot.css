@@ -1,0 +1,242 @@
+body {
+    background-image: linear-gradient(to right, #c2e59c, #64b3f4);
+    margin: 0px;
+}
+
+h1 {
+    color: #283655;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 50px;
+}
+
+p {
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+.navbar {
+    font-family: Helvetica;
+    overflow: auto;
+    background-image: transparent; 
+    width: 100%; /* full width */
+} 
+
+.navbar a {
+    float: left;
+    color: #4b86b4;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* change background on mouseover */
+.navbar a:hover {
+    background: #98cec4;
+    color: black;
+}
+
+.active {
+    background-color: #a6d6b6;
+}
+
+/* adds responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500px */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+.main {
+    margin-top: 50px; /* add top margin to avoid content overlay */
+}
+
+.topic-menu {
+    text-align: center;
+}
+
+div.form {
+    display: block;
+    text-align: center;
+}
+
+form {
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+    text-align: left; 
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: #9cd1bf;
+    display: inline-block;
+}
+
+
+/* replaces input type=file by an image*/
+.image-upload>input {
+    display: none;
+  }
+
+.image:hover {
+    cursor: pointer;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /*12%100%*/
+    padding: 0px;
+    box-shadow: 0 0 20px grey;
+}
+
+/* .upload-text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial;
+} */
+
+/* .upload-text {
+    text-align: center;
+} */
+
+/* .image-upload{
+    position: relative;
+    display: inline-block; 
+} */
+.image-upload {
+    /* position: absolute; */
+    /* z-index: -999; */
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 53%;  /*75%*/
+    text-align: center;
+    width: 12%; 
+} 
+/*.upload-text*/
+.button {
+    font-family: Helvetica;
+    background-color: #85c4d5; 
+    border: 2px solid #77bde2;
+    color: #36454F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    /* margin-left: 42.5%;
+    margin-right: 57.5%; */
+    margin: auto;
+    width: 10%;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.feedback {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback > * {
+    display: inline;
+}
+
+/* .feedback-question {
+    align-self: center;
+} */
+
+.feedback-question {
+    font-size: 22px;
+}
+
+/* Customize the label (the container) */
+.container {
+    /* display: block; */
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  /* .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  } */
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+  

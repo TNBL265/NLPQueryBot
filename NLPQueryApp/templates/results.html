@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- <div class="feedback">
+    <label for="feedback-question" class="feedback-question">Do you agree to let us use the information from your document to further build our Knowledge Graph?</label>
+    <br>
+    <label class="container">Yes
+        <input type="radio" name="feedback-question">
+        <span class="checkmark"></span>
+    </label>
+    
+    <label class="container">No
+        <input type="radio" name="feedback-question">
+        <span class="checkmark"></span>
+    </label>
+</div> -->
+
+{% comment %} <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
+    <fieldset>
+      <legend>Do you agree to let us use the information from your document to further build our Knowledge Graph?</legend>
+      <div>
+        <input type="radio" 
+         name="privacy" value="yes" checked>
+        <label for="option1">Yes</label>
+  
+        <input type="radio" 
+         name="privacy" value="no">
+        <label for="option2">No</label>
+  
+        <!-- <input type="radio" id="contactChoice3"
+         name="contact" value="mail">
+        <label for="contactChoice3">Mail</label> -->
+      </div>
+      <div>
+        <input type="submit" id="privacy_sub" name="privacy_sub" value="Save" />
+      </div>
+    </fieldset>
+  </form> {% endcomment %}
+  
+  <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
+            <label for="question">Your Query:</label>
+            <input type="text" id="question" name="question">
+            <input type="submit" name="results_question_sub" value="Submit" />            
+  </form>
+
+  <div>
+    <p>Entities found:{{ entities|default:"" }}</p>
+    <p>Relations found:{{ relations|default:"" }}</p>
+  </div>
+  
+  <div id="placeholder">
+    {{ main_html_str|safe|escape|default:"" }}
+  </div>
+</body>
+{% endblock content %}

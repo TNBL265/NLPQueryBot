@@ -1,0 +1,3 @@
+"Is share authrized by shareholder?"
+"Does shareholder buy stock?"
+"Does share represent business?"
