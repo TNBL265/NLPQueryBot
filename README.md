@@ -66,6 +66,7 @@ NLPQueryBot
 │   │
 │   └───templates
 │   │   │    base.html
+│   │   │    contacts.html
 │   │   │    home.html
 │   │   │    results.html
 │   │
@@ -99,13 +100,24 @@ NLPQueryBot
     - 6. `pip install mpld3==0.5.2`
 - Go to the folder `QueryBot` and run `python manage.py runserver`
 - Open the link shown in the console below:<br>
-![](https://i.imgur.com/JHibbk3.png)
+![](https://i.imgur.com/JHibbk3.png)<br>
 (As you can see from the console, the `Custom Pipeline` has already been initialized before launching our website.)
-- You will be welcomed with a *HomePage* like the one below where you can start uploading your `Doc` and ask `Qus` (A question should contain a subject, a verb and an object so our `QueryBot` can try to find the related *relationships* from your `Doc`). A sample `Doc` can be found at [Example_inputs/Stock.txt](Example_inputs/Stock.txt) (It is simply the content of the ['Stock' Wiki page](https://en.wikipedia.org/wiki/Stock)) and some sample `Qus` can be found at [Example_inputs/Qus_ls.txt](Example_inputs/Qus_ls.txt).
-- As you click the *Submit* button, you will be redirected to the *ResultsPage*.
-- At the top of the *ResultsPage*, our `QueryBot` allowed you to ask another questions (the *ResultsPage* will simply reload to show the new results): 
-- Right below is a small paragraph showing the `Entities` and `Relations` we found from your `Qus`. These `Entities` and `Relations` will be grouped into *SVO* triples to be used to draw the `KG` below.
-- At the bottom of the *ResultsPage*, our `KG` can be seen in 6 sections:
+- You will be welcomed with a *HomePage* like the one below where you can start uploading your `Doc` and ask `Qus` (A question should contain a subject, a verb and an object so our `QueryBot` can try to find the related *relationships* from your `Doc`). A sample `Doc` can be found at [Example_inputs/Stock.txt](Example_inputs/Stock.txt) (It is simply the content of the ['Stock' Wiki page](https://en.wikipedia.org/wiki/Stock)) and some sample `Qus` can be found at [Example_inputs/Qus_ls.txt](Example_inputs/Qus_ls.txt).<br>
+![](https://i.imgur.com/KOPBwiV.jpg)
+
+- This is what is shown on our *ContactPage*:
+![](https://i.imgur.com/9cN8ubr.jpg)
+- As you click the *Submit* button, you will be redirected to the *ResultsPage*.<br>
+Example for *"Is share authorized by shareholder?"*:<br>
+![](https://i.imgur.com/gdFqCi9.jpg)
+![](https://i.imgur.com/MiPtwXW.jpg)
+- At the top of the *ResultsPage*, our `QueryBot` allows you to ask another question (the *ResultsPage* will simply reload to show the new results)<br>
+Example for *"Does share holder buy stock?"*: <br>
+![](https://i.imgur.com/Imfb65Y.jpg)
+![](https://i.imgur.com/zHM88ZA.jpg)
+
+- Right below the *Question Bar* is a small paragraph showing the `Entities` and `Relations` we found from your `Qus`. These `Entities` and `Relations` will be grouped into *SVO* triples to be used to draw the `KG` below.
+- At the bottom of the *ResultsPage*, our `KG` can be seen in 6 sections (each graph is limited to 3 *Relations* to avoid overloading):
     - ***Perfect Match from your Doc:*** the exact`Entities` and `Relations` from your `Qus` can be found in your `Doc`.
     - ***Both similar Entities from your Doc:*** only `Entities` from your `Qus` is similar to those in your `Doc`. The `Relations` can vary.
     - ***Entity {subject} from your Doc:*** only the *Entity 1* from your `Qus` can be found as a *Subject* in your `Doc`.
