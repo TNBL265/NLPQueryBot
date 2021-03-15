@@ -3,7 +3,6 @@
 {% block content %}
     <div class="navbar">
         <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-        <!-- <a href="contacts.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> -->
         <a href="{% url 'contactpage'%}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     </div>
 
@@ -36,31 +35,8 @@
 
                 {% comment %} <input id="file-input" type="file" required /> {% endcomment %}
                 <input type="file" name="document" id="file-input" required>
-
-                <!-- <div class="upload-text">Click to upload a document</div> -->
             </div><br><br>
-            <!-- <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br> -->
-
-
-
-            <!-- <button>class="button" type="button">Submit</button> -->
-
-            <!-- <a href="results.html" class="button">Submit</a> -->
             <input  type="submit" id="home_question_sub" name="home_question_sub"  class="button" value="Submit" />
         </form>
     </div>
-
-    <!-- <div class="upload-text">
-            Click to upload an image
-        </div> -->
-
 {% endblock content %}
