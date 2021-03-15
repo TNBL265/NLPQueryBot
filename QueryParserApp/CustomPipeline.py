@@ -60,7 +60,6 @@ class Pipeline(object):
 
 ## First custom matcher will look for compound keynouns.
 ## It will be added before NER but won't overwrite any previously defined ents from the built-in NER
-
 ## Second custom matcher will look for simple keynouns.
 ## If the ents are already defined from previous pipes, we won't mark it as an ents here a gain.
 ## So we will need to add if after NER (last in our pipeline)

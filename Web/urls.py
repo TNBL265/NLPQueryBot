@@ -23,6 +23,3 @@ urlpatterns = [
     path('', include('NLPQueryApp.urls')),
     url(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
 ]
-
-
-
