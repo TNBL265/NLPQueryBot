@@ -38,19 +38,38 @@
     </fieldset>
   </form> {% endcomment %}
   
-  <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
+  <form method="POST" enctype="multipart/form-data" style="margin-top: 10vh;"> {% csrf_token %}
             <label for="question">Your Query:</label>
             <input type="text" id="question" name="question">
-            <input type="submit" name="results_question_sub" value="Submit" />            
+            <input class="button" type="submit" name="results_question_sub" value="Submit" style="margin-top: 15px;"/>            
   </form>
 
   <div>
-    <p>Entities found:{{ entities|default:"" }}</p>
-    <p>Relations found:{{ relations|default:"" }}</p>
+    <p>Entities found: {{ entities|default:"" }}</p>
+    <p>Relations found: {{ relations|default:"" }}</p>
   </div>
   
   <div id="placeholder">
     {{ main_html_str|safe|escape|default:"" }}
+  </div>
+
+  <div>
+    <p style="
+      font-size: 15px; 
+      text-align: left; 
+      margin-left: 22vw; 
+      margin-right: auto; 
+      top: 50%; 
+      transform: translate(0, 1100px); 
+      padding-bottom: 50px;
+      ">
+      <b>Perfect Match from your Doc:</b> the exact Entities and Relations from your Question can be found in your Doc<br>
+      <b>Both similar Entities from your Doc:</b> only Entities from your Question is similar to those in your Doc; the Relations can vary<br>
+      <b>Entity <i>{subject}</i> from your Doc:</b> only Entity 1 from your Question can be found as a Subject in your Doc<br>
+      <b>Entity <i>{object}</i> from your Doc:</b> only Entity 2 from your Question can be found as an Object in your Doc<br>
+      <b>Perfect Match from our Database:</b> both the Entities and Relations from your Question can be found inside our Database<br>
+      <b>Partial Match from our Database:</b> only the Entities from your Question can be found in our Database; the Relations may vary
+    </p>
   </div>
 </body>
 {% endblock content %}

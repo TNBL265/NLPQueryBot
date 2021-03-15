@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="navbar">
+        <!-- <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a> -->
+        <a href="{% url 'nlpquery-home'%}"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a class="active" href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    </div>
+
+    <div class="main">
+        <h1>Any feedback or queries?</h1>
+        <p>If you have any quetions or feedback regarding our query bot, do feel free to contact us!</p><br>
+    </div>
+
+    <div class="email">
+    <p style="
+    font-size: 20px; 
+    text-align: left; 
+    margin-left: 35vw; 
+    margin-right: auto; 
+    top: 50%; 
+    /* transform: translate(0, 50px);  */
+    padding-bottom: 50px;
+    ">
+        Blong: <a href="mailto:long_tran@mymail.sutd.edu.sg">long_tran@mymail.sutd.edu.sg</a><br>
+        Joe: <a href="mailto:baarath_sellathurai@mymail.sutd.edu.sg">baarath_sellathurai@mymail.sutd.edu.sg</a><br>
+        Jodi: <a href="mailto:jodi_wu@mymail.sutd.edu.sg">jodi_wu@mymail.sutd.edu.sg</a><br>
+        Wei Guang: <a href="mailto:weiguang_han@mymail.sutd.edu.sg">weiguang_han@mymail.sutd.edu.sg</a><br>
+        Michael: <a href="mailto:michael_chun@mymail.sutd.edu.sg">michael_chun@mymail.sutd.edu.sg</a>
+    </p>
+    </div>
+{% endblock content %}

@@ -14,11 +14,11 @@ class Pipeline(object):
 
     def pipeline(self, nlp):
         compound_ls = []; simple_ls = []
-        with open("./QueryParserApp/content/compound_keywords.txt", "r") as f:
+        with open("./QueryParserApp/content/compound_keywords.txt", "r", encoding="ISO-8859-1") as f:
             keyterms = f.readlines()
             keyterms = self.clean_keyterms(keyterms)
             compound_ls.extend(keyterms)
-        with open("./QueryParserApp/content/simple_keywords.txt", "r") as f:
+        with open("./QueryParserApp/content/simple_keywords.txt", "r", encoding="ISO-8859-1") as f:
             keyterms = f.readlines()
             keyterms = self.clean_keyterms(keyterms)
             simple_ls.extend(keyterms)

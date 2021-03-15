@@ -27,6 +27,12 @@ my_results = results_data(None, None, None, None)
 print("Step 1: Building Custom Spacy Pipeline...\n")
 custom_pipe = Pipeline()
 
+def homepage(request):
+    return render(request, 'home.html')
+
+def contactpage(request):
+    return render(request, 'contacts.html')
+
 def home(request):
     """
     HomePage
