@@ -3,12 +3,13 @@
 {% block content %}
     <div class="navbar">
         <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <!-- <a href="contacts.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> -->
+        <a href="{% url 'contactpage'%}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     </div>
 
     <div class="main">
-        <h1>NLP Query Bot</h1>
-        <p>Welcome to our NLP Query Bot! Feel free to ask any questions you may have regarding your chosen topic</p><br><br>
+        <h1>Query Bot</h1>
+        <p>Welcome to our query bot! Feel free to ask any questions you may have regarding your chosen topic</p><br><br>
     </div>
 
     <div class="form">
@@ -26,15 +27,15 @@
 
 
             <label for="question">Your Query:</label>
-            <input type="text" id="question" name="question"><br><br>
+            <input type="text" id="question" name="question" required><br><br>
 
             <div class="image-upload">
                 <label for="file-input">
                     <img class="image" src="{% static 'images/upload-docs-green.png' %}" />
                 </label>
 
-                {% comment %} <input id="file-input" type="file" /> {% endcomment %}
-                <input type="file" name="document" id="file-input">
+                {% comment %} <input id="file-input" type="file" required /> {% endcomment %}
+                <input type="file" name="document" id="file-input" required>
 
                 <!-- <div class="upload-text">Click to upload a document</div> -->
             </div><br><br>
