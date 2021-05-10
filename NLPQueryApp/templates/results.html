@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+    <link href="{% static 'querybot.css' %}" rel="stylesheet"/>
 {% comment %} <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
     <fieldset>
       <legend>Do you agree to let us use the information from your document to further build our Knowledge Graph?</legend>

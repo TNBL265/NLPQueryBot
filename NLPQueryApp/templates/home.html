@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+    <link href="{% static 'querybot.css' %}" rel="stylesheet"/>
     <div class="navbar">
         <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="{% url 'contactpage'%}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
