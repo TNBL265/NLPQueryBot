@@ -98,11 +98,6 @@ class SimpleEntityMatcher(object):
         self.matcher = PhraseMatcher(nlp.vocab)
         self.matcher.add(label, None, *patterns)
 
-    def __init__(self, nlp, terms, label):
-        patterns = [nlp.make_doc(term) for term in terms]
-        self.matcher = PhraseMatcher(nlp.vocab)
-        self.matcher.add(label, None, *patterns)
-
     def __call__(self, doc):
         matches = self.matcher(doc)
         spans = []
